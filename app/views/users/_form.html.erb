@@ -1,0 +1,26 @@
+<%= form_tag users_path do %>
+            <h3 class ="mb-5">please subscribe</h3>
+            <div class="row">
+            <%= hidden_field_tag 'token'%>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <%= text_field_tag [:name], nil, placeholder: 'Your name', class: 'form-control'%>
+                </div>
+                <div class="form-group">
+                    <%= text_field_tag [:last_name], nil, placeholder: 'Your last name', class: 'form-control'%>
+                </div>
+                <div class="form-group">
+                    <%= email_field_tag [:email], nil, placeholder: 'email', class: 'form-control' %>
+                </div>
+				<div class="form-group">
+                    <%= password_field_tag [:password] , nil, placeholder: 'Your password', class: 'form-control'%>
+                </div>
+                <div class="form-group">
+                    <%= password_field_tag [:password_confirm] , nil, placeholder: 'Confirm yout password', class: 'form-control'%>
+                </div>
+				<div class="form-group center">
+                    <div><%= submit_tag 'Save' , class: "btn btn-primary mb-5"%>
+                <div>
+                </div>
+            </div>
+        <% end %>

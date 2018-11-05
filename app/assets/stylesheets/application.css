@@ -1,0 +1,12 @@
+#bouttonsub{
+    margin-top: 20%;
+    margin-left: 50%;
+    margin-bottom: 10%;
+}
+img.superbg {
+    position:static;
+    height: 50%;
+    width:50%;
+    margin-left: 25%;
+    z-index:-1;
+}

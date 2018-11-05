@@ -1,0 +1,39 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-secondary text-secondary">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" >Private Club</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="text-dark"><%= link_to "login", login_path %></li>
+                <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Account <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu text-dark">
+                            <li class="divider"></li>
+                            <% if logged_in? %>
+                            <li>
+                                <%= link_to "Page Club", club_path %>
+                            </li>
+                            <li>
+                                <%= link_to "Voir mon profil", user_path(current_user) %>
+                            </li>
+                            <li>
+                                <%= link_to "Modifier mon profil", edit_user_path(current_user) %>
+                            </li>
+                            <li>
+                                <%= link_to "Log out", logout_path, method: :delete %>
+                            </li>
+                            </ul>
+                        </li>
+                        <% else %>
+
+                        <li><%= link_to "Log in", login_path %></li>
+                        <% end %>
+                    <li><%= link_to "Home", root_path %></li>
+                </li>
+            </ul>
+        </div>
+    </nav>
